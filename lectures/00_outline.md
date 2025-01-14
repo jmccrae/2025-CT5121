@@ -76,7 +76,7 @@ work on examples related to the topic.
 ---
 ## Lecture Schedule
 
-* No lecture on January 28th.
+* Video lecture on January 28th.
 * Lecture on January 29th will be online.
 * Guest lecture on February 5th and 11th.
 
