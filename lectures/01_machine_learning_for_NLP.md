@@ -135,7 +135,7 @@ $$\mathbf{h_n} = f_{n-1}(\mathbf{h_{n-1}}; \mathbf{w_{n-1}})$$
 
 ...
 
-$$\mathbf{h_1} = f_0(\mathbf{x}; \mathbf{w_{n-1}}$$
+$$\mathbf{h_1} = f_0(\mathbf{x}; \mathbf{w_0})$$
 
 ---
 
