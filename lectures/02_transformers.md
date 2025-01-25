@@ -160,7 +160,12 @@ h &= g(x) + x\\
 
 ---
 
-## Layer Normalization
+<!-- .slide: data-background="#fff" -->
+![Batch Normalization](img/batch_norm.png)
+
+---
+
+## Batch Normalization
 
 - In layer normalization, the mean and variance are calculated over all neurons in a layer
 - This is faster than batch normalization, because we don't need to calculate the mean and variance for each batch
