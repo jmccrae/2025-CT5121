@@ -191,7 +191,7 @@ This allows us to quantize down to 8, 4 or even 2 bits.
 
 ---
 
-## Training Sentence Transformers
+## Siamese Networks
 
 - Siamese network, uses two similar examples $x_1$ and $x_2$.
 
@@ -200,6 +200,10 @@ h_1 &= f(x_1)\\
 h_2 &= f(x_2)\\
 \text{similarity} &= \text{cosine}(h_1, h_2)
 \end{aligned} $$
+
+---
+
+## Triplet loss
 
 - Triplet loss, uses a positive example $x_p$ and a negative example $x_n$.
 
