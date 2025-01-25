@@ -259,7 +259,11 @@ $$ \text{loss} = \max(0, \text{margin} - \text{cosine}(h_a, h_p) + \text{cosine}
 ## Summary
 
 - Transformers are a powerful architecture for NLP
-- 
+- Most transformers are encoder-only or decoder-only
+- Transformers can be fine-tuned for specific tasks
+- Parameter efficient transformers can be trained more easily
+- Sentence transformers are used for semantic similarity and other tasks
+- Reinforcement learning can make transformers more human-like
 
 
 
