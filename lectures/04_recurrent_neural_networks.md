@@ -48,9 +48,9 @@ $$ y^{t} = g(h^{t}) $$
 
 We can use the same weights for every time step.
 
-$$ h^{t} = f(h^{t-1}, x^{t}; \mathbf{W}) $$
+$$ h^{t} = f(h^{t-1}, x^{t}; \mathbf{W}_f) $$
 
-$$ y^{t} = g(h^{t}; \mathbf{W}) $$
+$$ y^{t} = g(h^{t}; \mathbf{W}_g) $$
 
 ---
 
