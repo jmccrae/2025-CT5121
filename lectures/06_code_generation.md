@@ -139,9 +139,7 @@
 - New evaluation metric for code synthesis.  
 - Improves BLEU by considering code syntax and semantics.  
 
-$$
-\mathrm{CodeBLEU} = \alpha \cdot \mathrm{BLEU} + \beta \cdot \mathrm{BLEU}_\mathrm{weight}\\ + \gamma \cdot \mathrm{AST} + \delta \cdot \mathrm{DataFlow}
-$$
+$$\mathrm{CodeBLEU} = \alpha \cdot \mathrm{BLEU} + \beta \cdot \mathrm{BLEU}_\mathrm{weight}\\ + \gamma \cdot \mathrm{AST} + \delta \cdot \mathrm{DataFlow}$$
 
 ---
 
@@ -149,9 +147,7 @@ $$
 
 - Most important metric for machine translation evaluation
 
-$$
-\mathrm{BLEU} = \mathrm{BP} \cdot \exp\left(\sum_{n=1}^N w_n \log p_n\right)
-$$
+$$\mathrm{BLEU} = \mathrm{BP} \cdot \exp\left(\sum_{n=1}^N w_n \log p_n\right)$$
 
 - BLEU score is the geometric mean of n-gram precisions.
 - Typically $w_1 = \ldots = w_N = \frac{1}{N}$.
@@ -162,9 +158,7 @@ $$
 
 - **Precision** is the ratio of n-grams in the candidate to the reference.
 
-$$
-p_n = \frac{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n c^C_\mathrm{clip}(i\ldots i+n)}{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n c^C(i\ldots i+n)}
-$$
+$$p_n = \frac{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n c^C_\mathrm{clip}(i\ldots i+n)}{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n c^C(i\ldots i+n)}$$
 
 - $c_\mathrm{clip}^C$ is the count of n-grams in the candidate that appear in the reference.
 
@@ -174,9 +168,7 @@ $$
 
 - Uses weighted n-gram match for keywords.
 
-$$
-p_n = \frac{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n \mu_n^i c_\mathrm{clip}^C(i\ldots i+n)}{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n \mu_n^i c^C(i\ldots i+n)}
-$$
+$$p_n = \frac{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n \mu_n^i c_\mathrm{clip}^C(i\ldots i+n)}{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n \mu_n^i c^C(i\ldots i+n)}$$
 
 - $\mu_n^i = 5$ for keywords, $1$ otherwise.
 
@@ -186,9 +178,7 @@ $$
 
 - Leverages abstract syntax trees (ASTs) for structure.
 
-$$
-\mathrm{AST} = \frac{c_\mathrm{clip}(T_\mathrm{cand})}{c(T_\mathrm{ref})}
-$$
+$$\mathrm{AST} = \frac{c_\mathrm{clip}(T_\mathrm{cand})}{c(T_\mathrm{ref})}$$
 
 ---
 
