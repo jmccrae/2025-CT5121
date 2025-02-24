@@ -136,3 +136,82 @@
 
 ## CodeBLEU
 
+- New evaluation metric for code synthesis.  
+- Improves BLEU by considering code syntax and semantics.  
+
+$$
+\mathrm{CodeBLEU} = \alpha \cdot \mathrm{BLEU} + \beta \cdot \mathrm{BLEU}_\mathrm{weight}\\ + \gamma \cdot \mathrm{AST} + \delta \cdot \mathrm{DataFlow}
+$$
+
+---
+
+## BLEU
+
+- Most important metric for machine translation evaluation
+
+$$
+\mathrm{BLEU} = \mathrm{BP} \cdot \exp\left(\sum_{n=1}^N w_n \log p_n\right)
+$$
+
+- BLEU score is the geometric mean of n-gram precisions.
+- Typically $w_1 = \ldots = w_N = \frac{1}{N}$.
+
+---
+
+## BLEU
+
+- **Precision** is the ratio of n-grams in the candidate to the reference.
+
+$$
+p_n = \frac{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n c^C_\mathrm{clip}(i\ldots i+n)}{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n c^C(i\ldots i+n)}
+$$
+
+- $c_\mathrm{clip}^C$ is the count of n-grams in the candidate that appear in the reference.
+
+---
+
+## CodeBLEU - Weighted BLEU
+
+- Uses weighted n-gram match for keywords.
+
+$$
+p_n = \frac{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n \mu_n^i c_\mathrm{clip}^C(i\ldots i+n)}{\sum_{C \in \mathrm{Candidates}}\sum_{i=1}^n \mu_n^i c^C(i\ldots i+n)}
+$$
+
+- $\mu_n^i = 5$ for keywords, $1$ otherwise.
+
+---
+
+## CodeBLEU - AST Match
+
+- Leverages abstract syntax trees (ASTs) for structure.
+
+$$
+\mathrm{AST} = \frac{c_\mathrm{clip}(T_\mathrm{cand})}{c(T_\mathrm{ref})}
+$$
+
+---
+
+## CodeBLEU - Data-Flow Match
+
+- Incorporates data-flow analysis for semantics.
+- Difference between `return x` and `return y` is captured.
+- Ensures logic correctness is evaluated.
+
+---
+
+## CodeBLEU Evaluation
+
+- Better correlation with human evaluation scores.
+- Evaluated on text-to-code, translation, and refinement tasks.
+- Surpasses BLEU and perfect accuracy in reliability.
+- Hyperparameter tuning improves correlation.
+
+---
+
+## Summary
+
+- Code generation systems like StarCoder, REDCODER, and ChatGPT are evaluated.
+- Techniques from large language modelling are applied to code generation.
+- CodeBLEU is a new metric for code synthesis evaluation.
+
