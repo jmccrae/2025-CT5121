@@ -61,7 +61,6 @@ Based on https://arxiv.org/pdf/2101.00774
 ### Document Retrieval
 
 * **Information Retrieval**: Retrieve relevant documents from a large corpus of text.
-* Boolean retrieval, vector space model, and language models are commonly used for this task.
    * Boolean retrieval: Documents are retrieved based on the presence or absence of keywords.
    * Vector space model: Documents are represented as vectors in a high-dimensional space, and similarity is measured using the cosine similarity.
    * Language models: Documents are ranked based on their likelihood of generating the query.
