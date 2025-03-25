@@ -48,7 +48,7 @@
 <!-- .slide: data-background="#fff" -->
 ![Speech Recognition Architecture](img/speech_recognition.png)
 
-For more read: https://towardsdatascience.com/recognizing-speech-commands-using-recurrent-neural-networks-with-attention-c2b2ba17c837
+For more read: https://medium.com/data-science/recognizing-speech-commands-using-recurrent-neural-networks-with-attention-c2b2ba17c837
 
 ---
 
